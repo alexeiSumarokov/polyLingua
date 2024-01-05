@@ -1,0 +1,129 @@
+
+.header {
+  max-width: 1365px;
+  width: 90%;
+  margin: 20px auto 0;
+  font-size: 16px;
+  padding: 20px 0;
+  border-radius: 16px;
+  background-image: url(../images/header/header-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+.header__burger {
+  display: none;
+}
+.header__nav {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 70%;
+  flex: 0 1 70%;
+}
+.header__nav-items {
+  display: flex;
+}
+.header__nav-item {
+  padding: 0 16px;
+}
+.header__nav-item:first-child {
+  font-weight: 700;
+  color: #f3ab1c;
+}
+.header__contacts {
+  display: flex;
+  white-space: nowrap;
+}
+.header__address,
+.header__phone {
+  padding: 0 32px 0 16px;
+  font-weight: 700;
+  position: relative;
+}
+.header__address::after,
+.header__phone::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 25px;
+  width: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.header__address::after {
+  background-image: url(../images/header/adress.png);
+}
+.header__phone::after {
+  background-image: url(../images/header/phone.png);
+  top: 50%;
+}
+.production {
+  color: #000;
+  padding-top: 30px;
+  position: relative;
+  padding-bottom: 30px;
+  color: #fff;
+}
+.production__title {
+  color: #000;
+  text-align: left;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.production__descr{
+  color: #000;
+}
+.production__wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 700px;
+}
+.production__play {
+  align-self: stretch;
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-image: url(../images/production/production-bg.jpg);
+  border-radius: 40px;
+}
+@media(max-width: 500px){
+  .header .logo img{
+    max-width: 40px;
+  }
+  
+  .header__contacts{
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .header__address{
+    margin-bottom: 5px;
+  }
+}
+@media(max-width: 1200px){
+  .production__wrapper{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .production__title{
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .production__play{
+    min-height: 400px;
+  }
+  .production__play img{
+    width: 50vw;
+    height: 50vw;
+  }
+}
